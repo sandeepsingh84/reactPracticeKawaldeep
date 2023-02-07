@@ -1,0 +1,448 @@
+/* cards styling */
+
+.CardMain{
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+.fa{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  /* background-color: #000; */
+}
+
+.grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  column-gap: 10px;
+  /* background-color: aquamarine; */
+ row-gap: 10px;
+ 
+}
+.grid-items{
+  border: 1px solid rgb(155, 153, 153);
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 5px  rgb(207, 204, 204) , 3px 3px 5px  rgb(207, 204, 204);
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 50px;
+padding-left: 50px;
+ /* margin-bottom: 10px; */
+}
+.image{
+  width: 150px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.category{
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(71, 70, 70);
+  /* text-shadow: 2px 2px 4px rgb(173, 171, 171); */
+}
+.Product-name{
+  margin-bottom: 12px;
+  font-size: 15px;
+  color:rgb(71, 70, 70) ;
+  font-weight: inherit;
+  /* text-shadow: 2px 2px 3px gray; */
+}
+.product-detail{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.price{
+  font-weight: bold;
+  font-size: 20px;
+}
+.price-del{
+font-weight: normal;
+font-size: 15px;
+}
+@media only screen and (max-width:1024px)  {
+  .grid{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-content: center; */
+    column-gap: 10px; 
+    /* background-color: aquamarine; */
+   row-gap: 10px;
+   
+  }
+ 
+
+}
+@media only screen and (max-width:768px)  {
+  .grid{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: center; */
+    column-gap: 10px;
+    /* background-color: aquamarine; */
+   row-gap: 10px;
+   
+  }
+  .grid-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width:425px)  {
+  .grid{
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    column-gap: 10px;
+    /* background-color: aquamarine; */
+   row-gap: 10px;
+   
+  }
+}
+
+
+/* navbar styling */
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgb(0, 0, 0.3);
+  text-align: center;
+}
+ul li {
+  display: block;
+  text-align: center;
+  list-style-type: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+ul li:last-child {
+  border-right: none;
+}
+ul li a {
+  text-decoration: none;
+  padding: 0 50px;
+  display: block;
+}
+ul li a .icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto 10px;
+  overflow: hidden;
+
+}
+ /* ul li a .icon-wrap{
+    overflow: hidden;
+    height: 50px;
+    
+}  */
+ ul li a .icon i {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  font-size: 34px;
+  transition: 0.5s;
+  /* overflow: hidden; */
+ 
+
+}
+ul li a .icon i:last-child {
+ color: #000;
+}
+ul li a:hover .icon i {
+  transform: translateY(-100%);
+  color: rgb(94, 94, 180);
+}
+ul li a .name {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+ul li a .name span{
+    display: block;
+    position: relative;
+    font-size: 18px;
+    line-height: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+    
+    /* color: black; */
+    
+ }
+ul li a .name span:before{
+content: attr(dataType);
+position: absolute;
+top: -100%;
+left: 0;
+width: 100%;
+height: 100%;
+color:  rgb(94, 94, 180);
+}
+ul li a:hover .name span{
+    transform: translateY(20px); 
+    color: rgb(94, 94, 180);
+}   
+ 
+
+/* style Navbar styling */
+/* :root{
+  --clr:#222327
+} */
+
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--clr);
+} */
+.navigation{
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navigation  ul{
+  display: flex;
+  width: 350px;
+}
+.navigation  ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  z-index: 1;
+}
+.navigation  ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500px;
+}
+.navigation  ul li.active a .icon{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navigation  ul li.active a .icon{
+  transform: translateY(-35px);
+}
+.navigation  ul li a .text{
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.navigation  ul li.active a .text{
+  opacity: 1;
+transform: translateY(10px);
+}
+.indicator{
+  position: absolute;
+  top: -50%;
+  border-radius: 50%;
+  border: 6px solid var(--clr);
+  width: 70px;
+  height: 70px;
+  background: #29fd53;
+  transition: 0.5s;
+}
+.indicator::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: #f00;
+border-top-right-radius: 20px;
+box-shadow: -1px -10px 0 0 var(--clr);
+}
+.indicator::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background:transparent;
+border-top-left-radius: 20px;
+box-shadow: -1px -10px 0 0 var(--clr);
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  transform: translateX(calc(70px * 4));
+}
+
+
+/* footer styling  */
+.section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+
+.main{
+  background-color: #111; 
+  width: 90%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 100px 0 100px 0;
+  
+}
+.first{
+  width: 20%;
+  /* background-color: antiquewhite;  */
+  
+padding: 10px;}
+.second{
+  width: 30%;
+  /* background-color: aquamarine; 
+  /* padding-top: 26px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: -22px;
+}
+
+.third{
+  width: 20%;
+   /* background-color: burlywood;  */
+  padding: 10px;
+}
+.heading1{
+  color: white;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.heading2{
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 42px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.heading3{
+  color: white;
+  margin-bottom: 39px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.list{
+  color: #989898;
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 17px;
+  font-size: 15px;
+}
+.list1{
+  margin-right: 50px;
+  /* margin-bottom: 20px; */
+  line-height: 23px;
+}
+.list2{
+  margin-right: 50px;
+  margin-bottom: 15px;
+}
+.fafa{
+  display: flex;
+  color:#989898;
+  margin-bottom: 39px;
+  justify-content: center;
+  width: 100%;
+}
+.footericon{
+  border: 1px solid #989898;
+  border-radius: 100%;
+  padding: 10px;
+  margin-right: 8px;
+}
+.cards{
+  display: flex;
+  margin-bottom: 39px;
+  /* margin-top: 30px; */
+  width: 100%;
+  justify-content: center;
+ 
+}
+
+.card{
+  font-size: 35px;
+  margin-right: 20px;
+color: #989898;
+  justify-content: center;
+  display: flex;
+  
+}
+.para{
+  font-size: 14px;
+  color: #989898;
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 10px; */
+  /* margin-top: 10px; */
+}
+.para2{
+  font-size: 14px;
+  color: #989898;
+  /* margin-top: -10px; */
+}
+img{
+  width: 98%;
+  
+} 
